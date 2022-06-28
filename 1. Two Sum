@@ -1,0 +1,25 @@
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        
+        print (nums)
+        print (target)
+        
+        for num in nums[::-1]:
+            n1 = num
+            n2 = target - n1
+            print ("in the first loop n1 is "+str(n1))
+            for num in nums:
+                if num == n2:
+                    numbers = (n1,n2)
+                    print (numbers)
+                    break
+                else:
+                    continue #end current iteration in loop and continue to next iteration
+            if n1 + n2 == target:
+                break
+            else:
+                continue
+        i1 = nums.index(n1)
+        #i2 = nums.index(n2)
+        print (i1)
+        #print (i2)
